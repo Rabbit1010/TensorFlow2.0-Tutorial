@@ -11,7 +11,6 @@ from tensorflow.keras import layers
 
 def Toy_ResNet():
     inputs = tf.keras.Input(shape=(32,32,3), name='img')
-    x = inputs
 
     x = layers.Conv2D(32, 3, activation='relu')(inputs)
     x = layers.Conv2D(64, 3, activation='relu')(x)
@@ -35,32 +34,20 @@ def Toy_ResNet():
 
     return model
 
-def Load_and_Preprocess_Data():
-    (X_train, y_train), (X_test, y_test) = tf.keras.datasets.cifar10.load_data()
-    X_train = X_train.astype('float32') / 255.
-    X_test = X_test.astype('float32') / 255.
-    y_train = tf.keras.utils.to_categorical(y_train, 10)
-    y_test = tf.keras.utils.to_categorical(y_test, 10)
+if __name__ == '__main__':
+    """model testing"""
+    model = Toy_ResNet()
 
-    return X_train, X_test, y_train, y_test
+    # Plot and inspect the model
+    model.summary()
+    tf.keras.utils.plot_model(model, 'Toy_ResNet.png', show_shapes=True)
 
-# Get model
-net = Toy_ResNet()
 
-# Get data
-X_train, X_test, y_train, y_test = Load_and_Preprocess_Data()
 
-# Plot and inspect the model
-net.summary()
-tf.keras.utils.plot_model(net, 'Toy_ResNet.png', show_shapes=True)
 
-# Compile the model
-net.compile(optimizer=tf.keras.optimizers.RMSprop(1e-3),
-              loss='categorical_crossentropy',
-              metrics=['acc'])
 
-# Train the model
-net.fit(X_train, y_train,
-          batch_size=64,
-          epochs=1,
-          validation_split=0.2)
+
+
+
+
+

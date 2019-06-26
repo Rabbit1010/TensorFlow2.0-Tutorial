@@ -16,7 +16,7 @@ A TensorFlow2.0 tutorial for teaching purpose (in progress).
 2. Keras functional API
     * Simple ResNet model
     * Building residual block
-    * Complex graph topologies (ex. Image Colorization)
+    * Complex graph topologies (ex. [Image Colorization](http://iizuka.cs.tsukuba.ac.jp/projects/colorization/data/colorization_sig2016.pdf))
     * Model with shared layers
     * Model with multiple inputs and ouputs
     * Nice coding practices

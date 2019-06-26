@@ -19,17 +19,26 @@ model.add(layers.Dense(128, activation='relu'))
 model.add(layers.Dense(10, activation='softmax'))
 
 # Load trained model weights
-model.load_weights('./checkpoints/net_weights_05.h5')
+model.load_weights('./checkpoints/net_weights_10.h5')
 
 pic = cv2.imread('./test8.png')
 
 # preprocess
 pic = pic / 255.0
 pic = np.mean(pic, axis=2)
-pic = np.expand_dims(pic, axis=0)
+pic = np.expand_dims(pic, axis=0) # fake a batch axis
 
-out = model(pic)
+out = model(pic) # eager execution, can also use model.predict() 
 out = out.numpy() # float 32
 
 plt.bar([0,1,2,3,4,5,6,7,8,9], np.squeeze(out))
 plt.show()
+
+result = np.argmax(out)
+
+
+
+
+
+
+
