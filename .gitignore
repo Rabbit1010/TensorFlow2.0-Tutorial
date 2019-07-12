@@ -1,5 +1,10 @@
 *.mp4
 /Topic 1/checkpoints
+/Topic 3/checkpoints
+/Topic 3/test_images
+/Topic 3/train_images
+/Topic 3/*.csv
+/Topic 3/*.zip
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
