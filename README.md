@@ -1,5 +1,8 @@
 # TensorFlow2.0-Tutorial
-A TensorFlow2.0 tutorial for teaching purpose (in progress).
+A TensorFlow2.0 tutorial for teaching purpose. (Course ended at Sep. 2019)
+
+## Dataset
+Note that the folders for dataset and checkpoints are not uploaded in GitHub, so things may broke somewhere.
 
 ## Temptatvie Schedule
 1. Simple network
@@ -29,13 +32,10 @@ A TensorFlow2.0 tutorial for teaching purpose (in progress).
     * Short guide on GPU choice
 4. Transfer learning
     * Transfer learning with pretrained CNN
-    * Text classification with RNN
-5. Customization
-    * Custom layers
-    * Custom model
-    * Custom training
-6. Generative models
-    * VAE
-    * DCGAN (optional)
-    * cGAN (Pix2Pix) (optional)
-7. Image captioning
+5. Generative models
+    * DCGAN (Generating anime faces using Getchu dataset)
+    * Constructing data input pipeline from TFRecord
+    * Custom training loop with tf.GradientTape()
+
+## Contact
+Please file an issue if there's any error, or suggest better coding practice. Thanks!

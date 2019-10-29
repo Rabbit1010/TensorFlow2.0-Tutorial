@@ -2,7 +2,7 @@
 """
 Created on Fri Jul  5 14:42:51 2019
 
-@author: user
+@author: Wei-Hsiang, Shen
 """
 
 import random

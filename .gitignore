@@ -5,6 +5,9 @@
 /Topic 3/train_images
 /Topic 3/*.csv
 /Topic 3/*.zip
+/Topic 4/data
+/Topic 5/data
+/Topic 5/generated_images
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
